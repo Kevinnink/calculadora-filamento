@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos dom</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div>
+        <h1>CALCULADORA ORÇAMENTO IMPRESSAO 3D</h1>
+
+        <h3>Impressoras</h3>
+        <section>
+            <select id="impressoras">
+                <option value="BambuLabA1">Malvadesa (A1)</option>
+                <option value="EnderV3KE">Do Corre (Ender3)</option>
+            </select>
+        </section>
+
+        <h3>Preço Filamento</h3>
+        <input type="text" id="precoFilamento" placeholder="Ex: 100">
+
+        <h3>Gramas da Peça</h3>
+        <input type="text" id="filamentoGasto" placeholder="Ex: 250">
+
+        <h3>Tempo de Impressao</h3>
+        <input type="text" id="tempoImpressao" placeholder="Ex: 2.5">
+
+       <h3>Embalagens</h3>
+        <div id="embalagem">
+
+        <label class="check-item">
+            <input type="checkbox" id="caixa" name="caixa">
+            <span>Caixa</span>
+        </label>
+
+        <label class="check-item">
+            <input type="checkbox" id="pacotePequeno" name="pacotePequeno">
+            <span>Pacote Pequeno</span>
+        </label>
+
+        <label class="check-item">
+            <input type="checkbox" id="pacoteMedio" name="pacoteMedio">
+            <span>Pacote Médio</span>
+        </label>
+
+        <label class="check-item">
+            <input type="checkbox" id="pacoteGrande" name="pacoteGrande">
+            <span>Pacote Grande</span>
+        </label>
+
+        <label class="check-item">
+            <input type="checkbox" id="materiaisDiversos" name="materiaisDiversos">
+            <span>Materiais Diversos</span>
+        </label>
+
+        </div>
+        <div id="chaveirosArgola">
+            <h3>Argolas Chaveiro</h3>
+            <input type="number" name="argolas" id="argolas">
+        </div>
+        <button id="botaoCalcular" onclick="calcular()">Calcular</button>
+
+        <div id="custos"></div>
+        <div id="sugestaoValor"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
