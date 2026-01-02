@@ -48,6 +48,16 @@ document.querySelectorAll('.numero-br').forEach(input => {
       input.value = 'R$' + valor;
   });
 });
+document.querySelectorAll('.grama-br').forEach(input => {
+  input.addEventListener('input', () => {
+    input.value = input.value
+    let valor = input.value
+      .replace(/[^0-9.,]/g, '') 
+      .replace(/(\..*)\./g, '$1') 
+      .replace(/,(?=.*?,)/g, '')
+      input.value = valor + "g";
+  });
+});
 
 function calcular () {
         const precoFilamento = document.querySelector("#precoFilamento")
