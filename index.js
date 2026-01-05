@@ -38,6 +38,18 @@ function brToNumber(valor) {
       .trim()
   ) || 0;
 }
+
+function brToGramas(valor) {
+  if (!valor || valor === 'g') return 0;
+
+  return Number(
+    valor
+      .replace('g', '')
+      .replace(/\./g, '')
+      .replace(',', '.')
+      .trim()
+  ) || 0;
+}
 document.querySelectorAll('.numero-br').forEach(input => {
   input.addEventListener('input', () => {
     input.value = input.value
@@ -72,7 +84,7 @@ function calcular () {
         let potenciaWattsImpressora;
         let vidaUtilImpressora;
         let valorRoloFilamento = brToNumber(precoFilamento.value)
-        const pesoFilamentoGasto = brToNumber(filamentoGasto.value)
+        const pesoFilamentoGasto = brToGramas(filamentoGasto.value)
         const horasImpressao = brToTime(tempoImpressao.value)
         const precoEnergiaHoraKWH = parseFloat(0.9373500)
         const valorHora = 1
